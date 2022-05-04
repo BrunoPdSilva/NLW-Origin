@@ -14,6 +14,8 @@
   --brand-beige: hsl(39, 100%, 97%);
   --brand-light: hsl(148, 23%, 89%);
 
+  --bg-light: hsl(180, 14%, 97%);
+
   font-size: 62.5%; /* 1rem = 10px */
 
   --nav-height: 7.2rem;
@@ -31,6 +33,8 @@ body {
   text-align: center;
 
   overflow: overlay;
+
+  background-color: var(--bg-light);
 }
 
 .wrapper {
@@ -39,13 +43,17 @@ body {
   padding-inline: 2.4rem;
 }
 
-ul{
+ul {
   list-style: none;
+}
+
+section {
+  padding-block: 10rem;
 }
 
 /*===== HEADER ======*/
 header {
-  margin-top: calc(4.1rem + var(--nav-height ))
+  margin-top: calc(4.1rem + var(--nav-height));
 }
 
 header::before {
@@ -60,7 +68,6 @@ header::before {
   left: 0;
   z-index: -1;
 }
-
 
 header h4 {
   font-size: 1.4rem;
@@ -159,19 +166,18 @@ nav {
   transform: translateX(-50%);
 }
 
-nav .wrapper{
+nav .wrapper {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  
 }
 
-nav.scroll{
+nav.scroll {
   background: var(--primary-color);
   width: 100vw;
 }
 
-nav.scroll svg:nth-child(1) path{
+nav.scroll svg:nth-child(1) path {
   fill: white;
 }
 
@@ -194,7 +200,7 @@ body.menu-expanded > :not(nav) {
   display: none;
 }
 
-.menu, 
+.menu,
 .close-menu,
 body.menu-expanded .open-menu {
   opacity: 0;
@@ -206,7 +212,6 @@ body.menu-expanded .close-menu {
   opacity: 1;
   visibility: visible;
 }
-
 
 body.menu-expanded .menu {
   position: fixed;
@@ -220,12 +225,11 @@ body.menu-expanded .menu {
   padding-top: var(--nav-height);
 }
 
-
 body.menu-expanded nav {
   position: relative;
 }
 
-.menu ul:nth-child(1){
+.menu ul:nth-child(1) {
   display: flex;
   flex-direction: column;
   gap: 4.8rem;
@@ -234,7 +238,6 @@ body.menu-expanded nav {
   font-weight: 700;
   font-size: 2.4rem;
   line-height: 3.1rem;
-
 }
 
 .menu ul li a {
@@ -242,7 +245,7 @@ body.menu-expanded nav {
   text-decoration: none;
 }
 
-.menu .button{
+.menu .button {
   background: white;
   border-radius: 4rem;
   font-weight: 700;
@@ -260,7 +263,7 @@ body.menu-expanded nav {
   margin-bottom: 8rem;
 }
 
-.social-links{
+.social-links {
   display: flex;
   gap: 3.2rem;
   align-items: center;
@@ -273,10 +276,53 @@ body.menu-expanded button {
   z-index: 10;
 }
 
-body.menu-expanded .logo path{
+body.menu-expanded .logo path {
   fill: white;
 }
 
 body.menu-expanded button path {
   stroke: white;
+}
+
+/*=== SERVICES ===================================*/
+#services header h4 {
+  font-size: 1.4rem;
+  line-height: 150%;
+  letter-spacing: 0.08rem;
+
+  color: var(--primary-color);
+
+  text-transform: uppercase;
+
+  margin-bottom: 1.6rem;
+}
+
+#services header h2 {
+  font-size: 3rem;
+  line-height: 3.9rem;
+
+  color: var(--headline);
+
+  margin-bottom: 6rem;
+}
+
+#services .cards {
+  display: flex;
+  flex-direction: column;
+  gap: 3.2rem;
+}
+
+#services .card {
+  padding: 2.4rem;
+  text-align: left;
+
+  background: white;
+  /* Primary Colors/brand-green-light */
+
+  border: 1px solid var(--brand-light);
+  border-radius: .6rem;
+}
+
+#services .card h3 {
+  margin-block: 1.6rem;
 }
