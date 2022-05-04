@@ -51,8 +51,48 @@ ul {
   list-style: none;
 }
 
+img {
+  max-width: 100%;
+}
+
 section {
   padding-block: 10rem;
+}
+
+section header h4 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  line-height: 150%;
+  letter-spacing: 0.08rem;
+  color: var(--primary-color);
+
+  text-transform: uppercase;
+  
+  margin-bottom: 1.6rem;
+}
+
+section header h2 {
+  font-size: 3rem;
+  line-height: 3.9rem;
+
+  color: var(--headline);
+
+}
+
+section header h1 {
+  font-size: 3.4rem;
+  color: var(--headline);
+  line-height: 130%;
+
+  margin-bottom: 2.4rem;
+}
+
+section .content p {
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 150%;
+
+  color: var(--paragraph);
 }
 
 /*=== MENU-EXPANDED =================================*/
@@ -207,20 +247,6 @@ nav button {
   z-index: -1;
 }
 
-#home h4 {
-  font-size: 1.4rem;
-  color: var(--primary-color);
-  margin-bottom: 1.6rem;
-}
-
-#home h1 {
-  font-size: 3.4rem;
-  color: var(--headline);
-  line-height: 130%;
-
-  margin-bottom: 2.4rem;
-}
-
 #home p {
   font-size: 1.8rem;
   line-height: 150%;
@@ -293,24 +319,7 @@ nav button {
 }
 
 /*=== SERVICES ===================================*/
-#services header h4 {
-  font-size: 1.4rem;
-  line-height: 150%;
-  letter-spacing: 0.08rem;
-
-  color: var(--primary-color);
-
-  text-transform: uppercase;
-
-  margin-bottom: 1.6rem;
-}
-
-#services header h2 {
-  font-size: 3rem;
-  line-height: 3.9rem;
-
-  color: var(--headline);
-
+#services h2 {
   margin-bottom: 6rem;
 }
 
@@ -336,3 +345,16 @@ nav button {
 }
 
 /*=== About ===================================*/
+#about{
+  text-align: left;
+  background-color: var(--brand-beige);
+}
+
+#about header h2 {
+  margin-bottom: 2.4rem;
+}
+
+#about .content p {
+  margin-top: 2.4rem;
+  margin-bottom: 6rem;
+}
