@@ -1,4 +1,4 @@
-/* ======GERAL========== */
+/*=== GERAL ===================================*/
 
 * {
   margin: 0;
@@ -67,7 +67,7 @@ section header h4 {
   color: var(--primary-color);
 
   text-transform: uppercase;
-  
+
   margin-bottom: 1.6rem;
 }
 
@@ -76,7 +76,6 @@ section header h2 {
   line-height: 3.9rem;
 
   color: var(--headline);
-
 }
 
 section header h1 {
@@ -192,7 +191,7 @@ body.menu-expanded button path {
   stroke: white;
 }
 
-/*=== NAVIGATION =================================*/
+/*=== NAVBAR ===================================*/
 nav {
   display: flex;
 
@@ -229,7 +228,7 @@ nav button {
   cursor: pointer;
 }
 
-/*===== HOME ======*/
+/*=== HOME ===================================*/
 #home {
   padding-top: calc(4.1rem + var(--nav-height));
 }
@@ -344,8 +343,8 @@ nav button {
   margin-block: 1.6rem;
 }
 
-/*=== About ===================================*/
-#about{
+/*=== ABOUT ===================================*/
+#about {
   text-align: left;
   background-color: var(--brand-beige);
 }
