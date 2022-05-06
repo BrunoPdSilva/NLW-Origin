@@ -7,6 +7,9 @@ function onScroll() {
   showBackToTopButtonOnScroll();
 
   activateMenuAtCurrentSection(home);
+  activateMenuAtCurrentSection(services);
+  activateMenuAtCurrentSection(about);
+  activateMenuAtCurrentSection(contact);
 }
 
 function activateMenuAtCurrentSection(section) {
@@ -16,27 +19,24 @@ function activateMenuAtCurrentSection(section) {
 
   const sectionTop = section.offsetTop;
   const sectionHeight = section.offsetHeight;
-
   const sectionTopReachOrPassedTargetLine = targetLine >= sectionTop;
-  console.log(`O topo passou da linha? ${sectionTopReachOrPassedTargetLine}`);
 
   // Verificar se a base esta abaixo da linha alvo.
 
   const sectionEndsAt = sectionTop + sectionHeight;
-
   const sectionEndPassedTargetLine = sectionEndsAt <= targetLine;
-
-  console.log(
-    `O fundo da seção passou da linha? ${sectionEndPassedTargetLine}`
-  );
 
   // Limites da seção
 
   const sectionBoundaries =
     sectionTopReachOrPassedTargetLine && !sectionEndPassedTargetLine;
 
+  const sectionId = section.getAttribute("id");
+  const menuElement = document.querySelector(`.menu a[href*=${sectionId}]`);
+
+  menuElement.classList.remove("active");
   if (sectionBoundaries) {
-    
+    menuElement.classList.add("active");
   }
 }
 
